@@ -3,7 +3,9 @@
 
 class Book{
     private:
-        int id;
+        static int nextId;
+        int bookId;
+
         std::string title;
         std::string author;
         std::string genre;
@@ -12,7 +14,6 @@ class Book{
         int quantity;
     public:
         Book(
-            int id, 
             std::string title, 
             std::string author, 
             std::string genre, 
@@ -20,8 +21,8 @@ class Book{
             std::string publicationDate, 
             int quantity
         );
-
-        int getId() const;
+        
+        int getBookId() const;
         std::string getTitle() const;
         std::string getAuthor() const;
         std::string getGenre() const;
